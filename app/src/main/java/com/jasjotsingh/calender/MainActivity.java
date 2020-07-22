@@ -68,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, location)
                 .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, begin)
                 .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, end)
-                .putExtra(Intent.EXTRA_EMAIL,etEmail.getText().toString());
+                .putExtra(Intent.EXTRA_EMAIL,etEmail.getText().toString())
+                .putExtra(Intent.EXTRA_TEXT,"Please ignore the link to google meet")
+                .putExtra(Intent.EXTRA_SUBJECT,"Ignore Google Meet link");
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
